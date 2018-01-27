@@ -23,3 +23,5 @@ restaurant = Restaurant('wenyan','chinese')
 restaurant.set_number_served(500)
 restaurant.print_number_served()
 
+# Add something here
+
