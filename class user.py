@@ -29,14 +29,18 @@ first_user.increment_login_attempts()
 first_user.reset_login_attempts()
 print(first_user.login_attempts)
 
+class Privileges():
+    def __init__(self):
+        self.privileges = ['can add post','can delete post','can ban user']
+
+    def show_privileges(self):
+        print(self.privileges)
+
 class Admin(User):
 
     def __init__(self,first_name,last_name,sex,age):
         super().__init__(first_name,last_name,sex,age)
-        self.privieges = ['can add post','can delete post','can ban user']
-
-    def show_privileges(self):
-        print(self.privieges)
+        self.privileges = Privileges()
 
 new_admin = Admin('luo','xiao','男','35')
-new_admin.show_privileges()
+new_admin.privileges.show_privileges()
