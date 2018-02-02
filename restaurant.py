@@ -22,15 +22,6 @@ class Restaurant() :
     def increment_served(self,add_number):
         self.number_served += add_number
 
-restaurant = Restaurant('wenyan','chinese')
-restaurant.number_served = 500
-restaurant.print_number_served()
-restaurant.set_number_served(600)
-restaurant.print_number_served()
-restaurant.increment_served(200)
-restaurant.print_number_served()
-
-
 class IceCreamStand(Restaurant):
     def __init__(self,name,type,):
         super().__init__(name,type)
@@ -39,6 +30,3 @@ class IceCreamStand(Restaurant):
     def set_flavors(self,smell):
         self.flavors = smell
 
-my_icecream = IceCreamStand('luo','swedish')
-my_icecream.set_flavors(['strawberry','banana','chocklate'])
-print(my_icecream.flavors)
